@@ -3682,6 +3682,8 @@
     <Content Include="Views\Release\pv_Realign_Office_Forposting_User.cshtml" />
     <Content Include="Views\Release\pv_Realign_Office_PostedV2_user.cshtml" />
     <Content Include="Views\Report\vw_Accomplishment.cshtml" />
+    <Content Include="Views\Report\pv_WFPDetail.cshtml" />
+    <Content Include="Views\Report\pv_WFPCancel.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

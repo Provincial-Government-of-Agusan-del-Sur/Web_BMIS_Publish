@@ -8177,5 +8177,60 @@ namespace iFMIS_BMS.Controllers
                 return ex.Message;
             }
         }
+        public PartialViewResult pv_WFPDetail()
+        {
+            return PartialView("pv_WFPDetail");
+        }
+        public PartialViewResult pv_WFPCancel()
+        {
+            return PartialView("pv_WFPCancel");
+        }
+        public JsonResult GetWFPCancel([DataSourceRequest]DataSourceRequest request, int? office = 0, long? account = 0, int? year = 0)
+        {
+
+            List<WFPrepare> prog = new List<WFPrepare>();
+            using (SqlConnection con = new SqlConnection(Common.MyConn()))
+            {
+               
+                SqlCommand com = new SqlCommand(@"exec [sp_BMS_WFPCancel] " + office + "," + account + "," + year + "", con);
+                com.CommandTimeout = 0;
+                con.Open();
+                SqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    WFPrepare emp = new WFPrepare();
+                    emp.wfpid = Convert.ToInt32(reader.GetValue(0));
+                    emp.officeid = Convert.ToInt32(reader.GetValue(1));
+                    emp.programid = Convert.ToInt32(reader.GetValue(2));
+                    emp.accountid = Convert.ToInt64(reader.GetValue(3));
+                    emp.specificactivity = reader.GetValue(4).ToString();
+                    emp.particular = reader.GetValue(5).ToString();
+                    emp.amount = Convert.ToDouble(reader.GetValue(6));
+                    emp.yearof = Convert.ToInt32(reader.GetValue(7));
+                    emp.isPPMP= Convert.ToInt32(reader.GetValue(8));
+                    prog.Add(emp);
+                }
+            }
+            return Json(prog.ToDataSourceResult(request));// prog;
+        }
+        public string returnwfpitem(int? id=0, int? officeid=0, int? accountid=0, int? yearof=0, int? isPPMP=0)
+        {
+            try
+            {
+                var data = "";
+                using (SqlConnection con = new SqlConnection(Common.MyConn()))
+                {
+                  
+                    SqlCommand com = new SqlCommand(@"sp_BMS_ReturnWFPItem " + id + "," + officeid + "," + accountid + "," + yearof + "," + isPPMP + "," + Account.UserInfo.eid + "", con);
+                    con.Open();
+                    data = Convert.ToString(com.ExecuteScalar());
+                    return data;
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
     }
 }
