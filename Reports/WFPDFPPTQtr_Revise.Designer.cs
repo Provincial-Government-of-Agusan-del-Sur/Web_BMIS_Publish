@@ -27,6 +27,7 @@ namespace iFMIS_BMS.Reports
             Telerik.Reporting.TableGroup tableGroup16 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.TableGroup tableGroup17 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.TableGroup tableGroup18 = new Telerik.Reporting.TableGroup();
+            Telerik.Reporting.TableGroup tableGroup19 = new Telerik.Reporting.TableGroup();
             Telerik.Reporting.Barcodes.QRCodeEncoder qrCodeEncoder1 = new Telerik.Reporting.Barcodes.QRCodeEncoder();
             Telerik.Reporting.Drawing.StyleRule styleRule1 = new Telerik.Reporting.Drawing.StyleRule();
             this.textBox13 = new Telerik.Reporting.TextBox();
@@ -60,8 +61,6 @@ namespace iFMIS_BMS.Reports
             this.textBox53 = new Telerik.Reporting.TextBox();
             this.textBox54 = new Telerik.Reporting.TextBox();
             this.textBox55 = new Telerik.Reporting.TextBox();
-            this.textBox32 = new Telerik.Reporting.TextBox();
-            this.textBox45 = new Telerik.Reporting.TextBox();
             this.textBox3 = new Telerik.Reporting.TextBox();
             this.textBox57 = new Telerik.Reporting.TextBox();
             this.textBox58 = new Telerik.Reporting.TextBox();
@@ -120,6 +119,17 @@ namespace iFMIS_BMS.Reports
             this.textBox89 = new Telerik.Reporting.TextBox();
             this.textBox63 = new Telerik.Reporting.TextBox();
             this.textBox62 = new Telerik.Reporting.TextBox();
+            this.textBox69 = new Telerik.Reporting.TextBox();
+            this.textBox72 = new Telerik.Reporting.TextBox();
+            this.textBox76 = new Telerik.Reporting.TextBox();
+            this.textBox87 = new Telerik.Reporting.TextBox();
+            this.textBox88 = new Telerik.Reporting.TextBox();
+            this.textBox92 = new Telerik.Reporting.TextBox();
+            this.textBox93 = new Telerik.Reporting.TextBox();
+            this.textBox94 = new Telerik.Reporting.TextBox();
+            this.textBox95 = new Telerik.Reporting.TextBox();
+            this.textBox68 = new Telerik.Reporting.TextBox();
+            this.textBox45 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // textBox13
@@ -288,43 +298,42 @@ namespace iFMIS_BMS.Reports
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.879D)));
             this.table1.Body.Columns.Add(new Telerik.Reporting.TableBodyColumn(Telerik.Reporting.Drawing.Unit.Inch(0.879D)));
             this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.271D)));
+            this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.2D)));
             this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.271D)));
             this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.271D)));
             this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.281D)));
             this.table1.Body.Rows.Add(new Telerik.Reporting.TableBodyRow(Telerik.Reporting.Drawing.Unit.Inch(0.306D)));
-            this.table1.Body.SetCellContent(2, 1, this.textBox12);
-            this.table1.Body.SetCellContent(2, 2, this.textBox20);
-            this.table1.Body.SetCellContent(2, 3, this.textBox23);
-            this.table1.Body.SetCellContent(2, 5, this.textBox27);
-            this.table1.Body.SetCellContent(2, 6, this.textBox30);
-            this.table1.Body.SetCellContent(2, 7, this.textBox33);
-            this.table1.Body.SetCellContent(1, 1, this.textBox38);
-            this.table1.Body.SetCellContent(1, 2, this.textBox39);
-            this.table1.Body.SetCellContent(1, 3, this.textBox40);
-            this.table1.Body.SetCellContent(1, 5, this.textBox42);
-            this.table1.Body.SetCellContent(1, 6, this.textBox43);
-            this.table1.Body.SetCellContent(1, 7, this.textBox44);
-            this.table1.Body.SetCellContent(3, 1, this.textBox49);
-            this.table1.Body.SetCellContent(3, 2, this.textBox50);
-            this.table1.Body.SetCellContent(3, 3, this.textBox51);
-            this.table1.Body.SetCellContent(3, 5, this.textBox53);
-            this.table1.Body.SetCellContent(3, 6, this.textBox54);
-            this.table1.Body.SetCellContent(3, 7, this.textBox55);
-            this.table1.Body.SetCellContent(2, 0, this.textBox32);
-            this.table1.Body.SetCellContent(1, 0, this.textBox45);
-            this.table1.Body.SetCellContent(4, 0, this.textBox3);
-            this.table1.Body.SetCellContent(4, 5, this.textBox57);
-            this.table1.Body.SetCellContent(4, 6, this.textBox58);
-            this.table1.Body.SetCellContent(4, 7, this.textBox59);
-            this.table1.Body.SetCellContent(4, 1, this.textBox14);
-            this.table1.Body.SetCellContent(4, 2, this.textBox15);
-            this.table1.Body.SetCellContent(4, 3, this.textBox21);
-            this.table1.Body.SetCellContent(3, 0, this.textBox74);
-            this.table1.Body.SetCellContent(1, 4, this.textBox6);
-            this.table1.Body.SetCellContent(1, 8, this.textBox16);
-            this.table1.Body.SetCellContent(2, 8, this.textBox18);
-            this.table1.Body.SetCellContent(3, 8, this.textBox24);
-            this.table1.Body.SetCellContent(4, 8, this.textBox35);
+            this.table1.Body.SetCellContent(3, 1, this.textBox12);
+            this.table1.Body.SetCellContent(3, 2, this.textBox20);
+            this.table1.Body.SetCellContent(3, 3, this.textBox23);
+            this.table1.Body.SetCellContent(3, 5, this.textBox27);
+            this.table1.Body.SetCellContent(3, 6, this.textBox30);
+            this.table1.Body.SetCellContent(3, 7, this.textBox33);
+            this.table1.Body.SetCellContent(2, 1, this.textBox38);
+            this.table1.Body.SetCellContent(2, 2, this.textBox39);
+            this.table1.Body.SetCellContent(2, 3, this.textBox40);
+            this.table1.Body.SetCellContent(2, 5, this.textBox42);
+            this.table1.Body.SetCellContent(2, 6, this.textBox43);
+            this.table1.Body.SetCellContent(2, 7, this.textBox44);
+            this.table1.Body.SetCellContent(4, 1, this.textBox49);
+            this.table1.Body.SetCellContent(4, 2, this.textBox50);
+            this.table1.Body.SetCellContent(4, 3, this.textBox51);
+            this.table1.Body.SetCellContent(4, 5, this.textBox53);
+            this.table1.Body.SetCellContent(4, 6, this.textBox54);
+            this.table1.Body.SetCellContent(4, 7, this.textBox55);
+            this.table1.Body.SetCellContent(5, 0, this.textBox3);
+            this.table1.Body.SetCellContent(5, 5, this.textBox57);
+            this.table1.Body.SetCellContent(5, 6, this.textBox58);
+            this.table1.Body.SetCellContent(5, 7, this.textBox59);
+            this.table1.Body.SetCellContent(5, 1, this.textBox14);
+            this.table1.Body.SetCellContent(5, 2, this.textBox15);
+            this.table1.Body.SetCellContent(5, 3, this.textBox21);
+            this.table1.Body.SetCellContent(4, 0, this.textBox74);
+            this.table1.Body.SetCellContent(2, 4, this.textBox6);
+            this.table1.Body.SetCellContent(2, 8, this.textBox16);
+            this.table1.Body.SetCellContent(3, 8, this.textBox18);
+            this.table1.Body.SetCellContent(4, 8, this.textBox24);
+            this.table1.Body.SetCellContent(5, 8, this.textBox35);
             this.table1.Body.SetCellContent(0, 0, this.textBox10);
             this.table1.Body.SetCellContent(0, 1, this.textBox29);
             this.table1.Body.SetCellContent(0, 2, this.textBox36);
@@ -334,9 +343,20 @@ namespace iFMIS_BMS.Reports
             this.table1.Body.SetCellContent(0, 6, this.textBox47);
             this.table1.Body.SetCellContent(0, 7, this.textBox48);
             this.table1.Body.SetCellContent(0, 8, this.textBox52);
-            this.table1.Body.SetCellContent(2, 4, this.textBox56);
-            this.table1.Body.SetCellContent(3, 4, this.textBox7);
-            this.table1.Body.SetCellContent(4, 4, this.textBox8);
+            this.table1.Body.SetCellContent(3, 4, this.textBox56);
+            this.table1.Body.SetCellContent(4, 4, this.textBox7);
+            this.table1.Body.SetCellContent(5, 4, this.textBox8);
+            this.table1.Body.SetCellContent(1, 1, this.textBox69);
+            this.table1.Body.SetCellContent(1, 2, this.textBox72);
+            this.table1.Body.SetCellContent(1, 3, this.textBox76);
+            this.table1.Body.SetCellContent(1, 4, this.textBox87);
+            this.table1.Body.SetCellContent(1, 5, this.textBox88);
+            this.table1.Body.SetCellContent(1, 6, this.textBox92);
+            this.table1.Body.SetCellContent(1, 7, this.textBox93);
+            this.table1.Body.SetCellContent(1, 8, this.textBox94);
+            this.table1.Body.SetCellContent(1, 0, this.textBox95);
+            this.table1.Body.SetCellContent(2, 0, this.textBox68);
+            this.table1.Body.SetCellContent(3, 0, this.textBox45);
             tableGroup1.Name = "group2";
             tableGroup1.ReportItem = this.textBox13;
             tableGroup3.Name = "group6";
@@ -381,7 +401,6 @@ namespace iFMIS_BMS.Reports
             this.textBox47,
             this.textBox48,
             this.textBox52,
-            this.textBox45,
             this.textBox38,
             this.textBox39,
             this.textBox40,
@@ -390,7 +409,6 @@ namespace iFMIS_BMS.Reports
             this.textBox43,
             this.textBox44,
             this.textBox16,
-            this.textBox32,
             this.textBox12,
             this.textBox20,
             this.textBox23,
@@ -427,29 +445,42 @@ namespace iFMIS_BMS.Reports
             this.textBox2,
             this.textBox4,
             this.textBox26,
-            this.textBox28});
+            this.textBox28,
+            this.textBox69,
+            this.textBox72,
+            this.textBox76,
+            this.textBox87,
+            this.textBox88,
+            this.textBox92,
+            this.textBox93,
+            this.textBox94,
+            this.textBox95,
+            this.textBox68,
+            this.textBox45});
             this.table1.KeepTogether = false;
             this.table1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0D));
             this.table1.Name = "table1";
             tableGroup13.Name = "group";
-            tableGroup14.Name = "group9";
-            tableGroup15.Groupings.Add(new Telerik.Reporting.Grouping(null));
-            tableGroup15.Name = "detailTableGroup";
-            tableGroup16.Name = "group13";
+            tableGroup14.Name = "group15";
+            tableGroup15.Name = "group9";
+            tableGroup16.Groupings.Add(new Telerik.Reporting.Grouping(null));
+            tableGroup16.Name = "detailTableGroup";
+            tableGroup17.Name = "group13";
             tableGroup12.ChildGroups.Add(tableGroup13);
             tableGroup12.ChildGroups.Add(tableGroup14);
             tableGroup12.ChildGroups.Add(tableGroup15);
             tableGroup12.ChildGroups.Add(tableGroup16);
-            tableGroup12.Groupings.Add(new Telerik.Reporting.Grouping("=ooe"));
-            tableGroup12.Name = "ooename";
-            tableGroup12.Sortings.Add(new Telerik.Reporting.Sorting("=ooe", Telerik.Reporting.SortDirection.Asc));
-            tableGroup18.Name = "group4";
-            tableGroup17.ChildGroups.Add(tableGroup18);
-            tableGroup17.Name = "group3";
+            tableGroup12.ChildGroups.Add(tableGroup17);
+            tableGroup12.Groupings.Add(new Telerik.Reporting.Grouping("=accountname"));
+            tableGroup12.Name = "accountname";
+            tableGroup12.Sortings.Add(new Telerik.Reporting.Sorting("=accountname", Telerik.Reporting.SortDirection.Asc));
+            tableGroup19.Name = "group4";
+            tableGroup18.ChildGroups.Add(tableGroup19);
+            tableGroup18.Name = "group3";
             this.table1.RowGroups.Add(tableGroup12);
-            this.table1.RowGroups.Add(tableGroup17);
+            this.table1.RowGroups.Add(tableGroup18);
             this.table1.RowHeadersPrintOnEveryPage = false;
-            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(10.578D), Telerik.Reporting.Drawing.Unit.Inch(2.057D));
+            this.table1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(10.578D), Telerik.Reporting.Drawing.Unit.Inch(2.257D));
             // 
             // textBox12
             // 
@@ -654,33 +685,6 @@ namespace iFMIS_BMS.Reports
             this.textBox55.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox55.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox55.StyleName = "";
-            // 
-            // textBox32
-            // 
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.546D), Telerik.Reporting.Drawing.Unit.Inch(0.271D));
-            this.textBox32.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox32.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox32.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
-            this.textBox32.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(15D);
-            this.textBox32.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.textBox32.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox32.StyleName = "";
-            this.textBox32.Value = "=accountname";
-            // 
-            // textBox45
-            // 
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.546D), Telerik.Reporting.Drawing.Unit.Inch(0.271D));
-            this.textBox45.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox45.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox45.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox45.Style.Font.Bold = false;
-            this.textBox45.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(10D);
-            this.textBox45.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
-            this.textBox45.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox45.StyleName = "";
-            this.textBox45.Value = "=ooename";
             // 
             // textBox3
             // 
@@ -1394,6 +1398,126 @@ namespace iFMIS_BMS.Reports
             this.textBox62.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Top;
             this.textBox62.Value = "Executive Assistant IV";
             // 
+            // textBox69
+            // 
+            this.textBox69.Name = "textBox69";
+            this.textBox69.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.879D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox69.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox69.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox69.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox69.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox69.StyleName = "";
+            // 
+            // textBox72
+            // 
+            this.textBox72.Name = "textBox72";
+            this.textBox72.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.879D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox72.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox72.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox72.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox72.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox72.StyleName = "";
+            // 
+            // textBox76
+            // 
+            this.textBox76.Name = "textBox76";
+            this.textBox76.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.879D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox76.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox76.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox76.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox76.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox76.StyleName = "";
+            // 
+            // textBox87
+            // 
+            this.textBox87.Name = "textBox87";
+            this.textBox87.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.879D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox87.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox87.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox87.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox87.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox87.StyleName = "";
+            // 
+            // textBox88
+            // 
+            this.textBox88.Name = "textBox88";
+            this.textBox88.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.879D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox88.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox88.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox88.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox88.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox88.StyleName = "";
+            // 
+            // textBox92
+            // 
+            this.textBox92.Name = "textBox92";
+            this.textBox92.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.879D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox92.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox92.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox92.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox92.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox92.StyleName = "";
+            // 
+            // textBox93
+            // 
+            this.textBox93.Name = "textBox93";
+            this.textBox93.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.879D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox93.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox93.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox93.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox93.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox93.StyleName = "";
+            // 
+            // textBox94
+            // 
+            this.textBox94.Name = "textBox94";
+            this.textBox94.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.879D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox94.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox94.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox94.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox94.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox94.StyleName = "";
+            // 
+            // textBox95
+            // 
+            this.textBox95.Name = "textBox95";
+            this.textBox95.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.546D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.textBox95.Style.BorderStyle.Bottom = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox95.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox95.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox95.Style.Font.Bold = false;
+            this.textBox95.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(10D);
+            this.textBox95.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.textBox95.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox95.StyleName = "";
+            this.textBox95.Value = "=ooename";
+            // 
+            // textBox68
+            // 
+            this.textBox68.Name = "textBox68";
+            this.textBox68.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.546D), Telerik.Reporting.Drawing.Unit.Inch(0.271D));
+            this.textBox68.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox68.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox68.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
+            this.textBox68.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(15D);
+            this.textBox68.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.textBox68.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox68.StyleName = "";
+            this.textBox68.Value = "=accountname";
+            // 
+            // textBox45
+            // 
+            this.textBox45.Name = "textBox45";
+            this.textBox45.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.546D), Telerik.Reporting.Drawing.Unit.Inch(0.271D));
+            this.textBox45.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox45.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox45.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(9D);
+            this.textBox45.Style.Padding.Left = Telerik.Reporting.Drawing.Unit.Point(20D);
+            this.textBox45.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Left;
+            this.textBox45.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox45.StyleName = "";
+            this.textBox45.Value = "=specificactivity";
+            // 
             // WFPDFPPTQtr_Revise
             // 
             this.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
@@ -1443,8 +1567,6 @@ namespace iFMIS_BMS.Reports
         private Telerik.Reporting.TextBox textBox53;
         private Telerik.Reporting.TextBox textBox54;
         private Telerik.Reporting.TextBox textBox55;
-        private Telerik.Reporting.TextBox textBox32;
-        private Telerik.Reporting.TextBox textBox45;
         private Telerik.Reporting.TextBox textBox13;
         private Telerik.Reporting.TextBox textBox3;
         private Telerik.Reporting.TextBox textBox57;
@@ -1509,5 +1631,16 @@ namespace iFMIS_BMS.Reports
         private Telerik.Reporting.TextBox textBox89;
         private Telerik.Reporting.TextBox textBox63;
         private Telerik.Reporting.TextBox textBox62;
+        private Telerik.Reporting.TextBox textBox69;
+        private Telerik.Reporting.TextBox textBox72;
+        private Telerik.Reporting.TextBox textBox76;
+        private Telerik.Reporting.TextBox textBox87;
+        private Telerik.Reporting.TextBox textBox88;
+        private Telerik.Reporting.TextBox textBox92;
+        private Telerik.Reporting.TextBox textBox93;
+        private Telerik.Reporting.TextBox textBox94;
+        private Telerik.Reporting.TextBox textBox95;
+        private Telerik.Reporting.TextBox textBox68;
+        private Telerik.Reporting.TextBox textBox45;
     }
 }

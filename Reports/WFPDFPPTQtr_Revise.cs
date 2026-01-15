@@ -124,6 +124,7 @@ namespace iFMIS_BMS.Reports
             dt.Columns.Add("physicaltargethird");
             dt.Columns.Add("physicaltargefourth");
             dt.Columns.Add("ooe");
+            dt.Columns.Add("specificactivity");
             using (SqlConnection con = new SqlConnection(Common.MyConn()))
             {
            
@@ -153,6 +154,7 @@ namespace iFMIS_BMS.Reports
                     dr[9] =  reader.GetValue(10).ToString();
                     dr[10] =reader.GetValue(11).ToString();
                     dr[11] = reader.GetValue(15).ToString();
+                    dr[12] = reader.GetValue(21).ToString();
                     dt.Rows.Add(dr);
                 }
             }
