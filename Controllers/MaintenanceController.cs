@@ -2623,5 +2623,9 @@ namespace iFMIS_BMS.Controllers
                 return ex.Message;
             }
         }
+        public ActionResult AddItem()
+        {
+            return View("pv_WFPAddAccountItem");
+        }
     }
 }   

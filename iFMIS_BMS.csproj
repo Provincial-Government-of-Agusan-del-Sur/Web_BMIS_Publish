@@ -3684,6 +3684,7 @@
     <Content Include="Views\Report\vw_Accomplishment.cshtml" />
     <Content Include="Views\Report\pv_WFPDetail.cshtml" />
     <Content Include="Views\Report\pv_WFPCancel.cshtml" />
+    <Content Include="Views\Maintenance\pv_WFPAddAccountItem.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

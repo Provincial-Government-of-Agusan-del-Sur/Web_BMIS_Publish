@@ -118,8 +118,8 @@ namespace iFMIS_BMS.Reports
             this.textBox91 = new Telerik.Reporting.TextBox();
             this.textBox90 = new Telerik.Reporting.TextBox();
             this.textBox89 = new Telerik.Reporting.TextBox();
-            this.textBox62 = new Telerik.Reporting.TextBox();
             this.textBox63 = new Telerik.Reporting.TextBox();
+            this.textBox62 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // textBox13
@@ -1366,20 +1366,6 @@ namespace iFMIS_BMS.Reports
             this.textBox89.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Top;
             this.textBox89.Value = "Provincial Budget Officer";
             // 
-            // textBox62
-            // 
-            this.textBox62.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(8.33D), Telerik.Reporting.Drawing.Unit.Inch(1.469D));
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.09D), Telerik.Reporting.Drawing.Unit.Inch(0.209D));
-            this.textBox62.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox62.Style.Font.Bold = false;
-            this.textBox62.Style.Font.Name = "Tahoma";
-            this.textBox62.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
-            this.textBox62.Style.Font.Underline = false;
-            this.textBox62.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-            this.textBox62.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Top;
-            this.textBox62.Value = "Executive Assistant IV";
-            // 
             // textBox63
             // 
             this.textBox63.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(8.33D), Telerik.Reporting.Drawing.Unit.Inch(1.305D));
@@ -1393,6 +1379,20 @@ namespace iFMIS_BMS.Reports
             this.textBox63.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Bottom;
             this.textBox63.Style.Visible = false;
             this.textBox63.Value = "LIZETTE KAYE F. ESTILLORE  ";
+            // 
+            // textBox62
+            // 
+            this.textBox62.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(8.33D), Telerik.Reporting.Drawing.Unit.Inch(1.469D));
+            this.textBox62.Name = "textBox62";
+            this.textBox62.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.09D), Telerik.Reporting.Drawing.Unit.Inch(0.209D));
+            this.textBox62.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox62.Style.Font.Bold = false;
+            this.textBox62.Style.Font.Name = "Tahoma";
+            this.textBox62.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(6D);
+            this.textBox62.Style.Font.Underline = false;
+            this.textBox62.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.textBox62.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Top;
+            this.textBox62.Value = "Executive Assistant IV";
             // 
             // WFPDFPPTQtr_Revise
             // 
