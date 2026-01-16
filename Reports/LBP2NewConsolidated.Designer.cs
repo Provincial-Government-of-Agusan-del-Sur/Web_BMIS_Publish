@@ -137,6 +137,7 @@ namespace iFMIS_BMS.Reports
             this.textBox91 = new Telerik.Reporting.TextBox();
             this.textBox104 = new Telerik.Reporting.TextBox();
             this.textBox109 = new Telerik.Reporting.TextBox();
+            this.textBox5 = new Telerik.Reporting.TextBox();
             this.textBox6 = new Telerik.Reporting.TextBox();
             this.textBox7 = new Telerik.Reporting.TextBox();
             this.textBox8 = new Telerik.Reporting.TextBox();
@@ -238,10 +239,9 @@ namespace iFMIS_BMS.Reports
             this.textBox130 = new Telerik.Reporting.TextBox();
             this.reportFooterSection1 = new Telerik.Reporting.ReportFooterSection();
             this.reportHeaderSection1 = new Telerik.Reporting.ReportHeaderSection();
-            this.htmlTextBox1 = new Telerik.Reporting.HtmlTextBox();
             this.textBox102 = new Telerik.Reporting.TextBox();
             this.textBox3 = new Telerik.Reporting.TextBox();
-            this.textBox5 = new Telerik.Reporting.TextBox();
+            this.htmlTextBox1 = new Telerik.Reporting.HtmlTextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // pageHeaderSection1
@@ -1067,6 +1067,17 @@ namespace iFMIS_BMS.Reports
             this.textBox109.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox109.StyleName = "";
             this.textBox109.Value = "Office : {Fields.OfficeName}";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.571D), Telerik.Reporting.Drawing.Unit.Cm(0.999D));
+            this.textBox5.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox5.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox5.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0D);
+            this.textBox5.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox5.StyleName = "";
+            this.textBox5.Value = "=Fields.FundType";
             // 
             // textBox6
             // 
@@ -2492,15 +2503,6 @@ namespace iFMIS_BMS.Reports
             this.htmlTextBox1});
             this.reportHeaderSection1.Name = "reportHeaderSection1";
             // 
-            // htmlTextBox1
-            // 
-            this.htmlTextBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0.396D));
-            this.htmlTextBox1.Name = "htmlTextBox1";
-            this.htmlTextBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(12.4D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
-            this.htmlTextBox1.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
-            this.htmlTextBox1.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.htmlTextBox1.Value = "LGU : <span style=\"text-decoration: underline\">{Parameters.LGU.Value}</span>";
-            // 
             // textBox102
             // 
             this.textBox102.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0D));
@@ -2521,16 +2523,14 @@ namespace iFMIS_BMS.Reports
             this.textBox3.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox3.Value = "Programmed Appropriation and Obligation by Object of Expenditure";
             // 
-            // textBox5
+            // htmlTextBox1
             // 
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(3.571D), Telerik.Reporting.Drawing.Unit.Cm(0.999D));
-            this.textBox5.Style.BorderStyle.Left = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox5.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox5.Style.BorderWidth.Default = Telerik.Reporting.Drawing.Unit.Point(0D);
-            this.textBox5.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox5.StyleName = "";
-            this.textBox5.Value = "=Fields.FundType";
+            this.htmlTextBox1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0.396D));
+            this.htmlTextBox1.Name = "htmlTextBox1";
+            this.htmlTextBox1.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(12.4D), Telerik.Reporting.Drawing.Unit.Inch(0.2D));
+            this.htmlTextBox1.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
+            this.htmlTextBox1.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.htmlTextBox1.Value = "LGU : <span style=\"text-decoration: underline\">{Parameters.LGU.Value}</span>";
             // 
             // LBP2NewConsolidated
             // 
