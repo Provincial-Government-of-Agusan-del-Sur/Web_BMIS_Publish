@@ -43,6 +43,7 @@
             $("#projectaip").data("kendoDropDownList").dataSource.read();
         }
         else{ //excess and trust fund
+          
             $("#account").data("kendoComboBox").value("")
             $("#account").data("kendoComboBox").dataSource.read()
         }
@@ -87,7 +88,8 @@
             officeid: $("#office").val(),
             tyear: $("#wfpyear").val(),
             mode_trans: $("#gf_currentid").val(),
-            accountid:$("#account").val()
+            accountid:$("#account").val(),
+            fundid : $("#gfid").val() == 1 ? 0 : 1
 
         }
     }

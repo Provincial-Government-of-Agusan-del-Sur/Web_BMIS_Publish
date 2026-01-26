@@ -2207,10 +2207,10 @@ namespace iFMIS_BMS.Controllers
             return result;
             //}
         }
-        public ActionResult GetOfficeActivity([DataSourceRequest]DataSourceRequest request, int? officeid = 0, int? tyear = 0, int? mode_trans = 0, int? accountid = 0)
+        public ActionResult GetOfficeActivity([DataSourceRequest]DataSourceRequest request, int? officeid = 0, int? tyear = 0, int? mode_trans = 0, int? accountid = 0,int? fundid=0)
         {
             //string tempStr = "select * from fn_BMS_wfpactivity (" + officeid + "," + tyear + "," + Account.UserInfo.eid + ") order by  initiative";
-            if (mode_trans == 1) //current
+            if (mode_trans == 1 || fundid == 1) //current
             {
                 string tempStr = "exec sp_BMS_WFPActivity " + officeid + "," + tyear + "," + Account.UserInfo.eid + "";
                 DataTable dt = tempStr.DataSet();
