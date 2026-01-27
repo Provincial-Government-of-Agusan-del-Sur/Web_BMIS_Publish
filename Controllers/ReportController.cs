@@ -8329,7 +8329,7 @@ namespace iFMIS_BMS.Controllers
                 using (SqlConnection con = new SqlConnection(Common.MyConn()))
                 {
 
-                    SqlCommand com = new SqlCommand(@"update [tbl_R_BMS_WFP_AddAccountItem] set actioncode=4,userid=userid + ',' + '"+ Account.UserInfo.eid.ToString() + "',datetime=datetime + ','+ format(getdate(),'MM/dd/yyyy hh:mm:ss tt') where officeid=" + officeid + " and accountid="+ accountid + " and yearof="+ yearof + "", con);
+                    SqlCommand com = new SqlCommand(@"update [tbl_R_BMS_WFP_AddAccountItem] set actioncode=4,userid=userid + ',' + '"+ Account.UserInfo.eid.ToString() + "',datetime=datetime + ','+ format(getdate(),'MM/dd/yyyy hh:mm:ss tt') where officeid=" + officeid + " and accountid="+ accountid + " and yearof="+ yearof + " and [actioncode]=1", con);
                     con.Open();
                     data = Convert.ToString(com.ExecuteScalar());
                     return "success";
