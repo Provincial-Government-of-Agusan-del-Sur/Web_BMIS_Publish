@@ -8278,5 +8278,86 @@ namespace iFMIS_BMS.Controllers
                 return ex.Message;
             }
         }
+        public ActionResult AddAccountExempt([DataSourceRequest]DataSourceRequest request, int? officeid = 0, int? tyear = 0)
+        {
+          
+            string tempStr = "SELECT a.AccountID,AccountName FROM [IFMIS].[dbo].[tbl_R_BMSProgramAccounts]  AS a "+
+                            "inner join ifmis.dbo.tbl_R_BMSOfficePrograms as b on b.ProgramID = a.ProgramID and b.ActionCode = a.ActionCode and b.ProgramYear = a.AccountYear "+
+                            "inner join ifmis.dbo.tbl_R_BMSOffices as c on c.OfficeID = b.OfficeID " +
+                            "left join[IFMIS].[dbo].[tbl_R_BMS_WFP_AddAccountItem] as d on d.officeid=c.OfficeID and d.accountid=a.AccountID and d.yearof=a.AccountYear and d.actioncode=1" +
+                            "where AccountYear="+ tyear + " and a.ActionCode=1 and isnull(AccountName,'') != ''  " +
+                            "and c.OfficeID="+ officeid + " and isnull(d.accountid,0)=0 " +
+                            "order by AccountName";
+            DataTable dt = tempStr.DataSet();
+
+            var result = new ContentResult();
+            result.Content = SerializeDT.DataTableToJSON(dt);
+            result.ContentType = "application/json";
+            return result;
+              
+
+        }
+        public JsonResult GetWFPAddExempt([DataSourceRequest]DataSourceRequest request, int? office = 0, int? year = 0)
+        {
+
+            List<WFPrepare> prog = new List<WFPrepare>();
+            using (SqlConnection con = new SqlConnection(Common.MyConn()))
+            {
+
+                SqlCommand com = new SqlCommand(@"exec [sp_BMS_AddAccountItemExempt] " + office + "," + year + "", con);
+                com.CommandTimeout = 0;
+                con.Open();
+                SqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    WFPrepare emp = new WFPrepare();
+                    emp.officeid = Convert.ToInt32(reader.GetValue(0));
+                    emp.accountid = Convert.ToInt64(reader.GetValue(1));
+                    emp.office = reader.GetValue(2).ToString();
+                    emp.accountname = reader.GetValue(3).ToString();
+                    emp.yearof = Convert.ToInt32(reader.GetValue(4));
+                    prog.Add(emp);
+                }
+            }
+            return Json(prog.ToDataSourceResult(request));// prog;
+        }
+        public string returnaccount( int? officeid = 0, int? accountid = 0, int? yearof = 0)
+        {
+            try
+            {
+                var data = "";
+                using (SqlConnection con = new SqlConnection(Common.MyConn()))
+                {
+
+                    SqlCommand com = new SqlCommand(@"update [tbl_R_BMS_WFP_AddAccountItem] set actioncode=4,userid=userid + ',' + '"+ Account.UserInfo.eid.ToString() + "',datetime=datetime + ','+ format(getdate(),'MM/dd/yyyy hh:mm:ss tt') where officeid=" + officeid + " and accountid="+ accountid + " and yearof="+ yearof + "", con);
+                    con.Open();
+                    data = Convert.ToString(com.ExecuteScalar());
+                    return "success";
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+        public string AddAccountItem(int? officeid= 0, int? accountid=0, int? tyear=0)
+        {
+            try
+            {
+                using (SqlConnection con = new SqlConnection(Common.MyConn()))
+                {
+                    var data = "";
+                   
+                    SqlCommand com = new SqlCommand(@"INSERt into [IFMIS].[dbo].[tbl_R_BMS_WFP_AddAccountItem] ([officeid] ,[accountid],[yearof],[actioncode],[userid] ,[datetime]) values ("+ officeid + ","+ accountid + ","+ tyear + ",1,"+ Account.UserInfo.eid +",format(getdate(),'MM/dd/yyyy hh:mm:ss tt'))", con);
+                    con.Open();
+                    data = Convert.ToString(com.ExecuteScalar());
+                    return "success";
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
     }
 }
