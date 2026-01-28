@@ -1409,7 +1409,7 @@ namespace iFMIS_BMS.Reports
             // 
             // reportFooterSection1
             // 
-            this.reportFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1.768D);
+            this.reportFooterSection1.Height = Telerik.Reporting.Drawing.Unit.Inch(1.772D);
             this.reportFooterSection1.Items.AddRange(new Telerik.Reporting.ReportItemBase[] {
             this.textBox67,
             this.textBox66,
@@ -1443,7 +1443,7 @@ namespace iFMIS_BMS.Reports
             // 
             this.textBox66.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(2.4D), Telerik.Reporting.Drawing.Unit.Inch(1.473D));
             this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.222D), Telerik.Reporting.Drawing.Unit.Inch(0.295D));
+            this.textBox66.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.222D), Telerik.Reporting.Drawing.Unit.Inch(0.201D));
             this.textBox66.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox66.Style.Font.Bold = false;
             this.textBox66.Style.Font.Name = "Tahoma";
@@ -1483,7 +1483,7 @@ namespace iFMIS_BMS.Reports
             // 
             // textBox61
             // 
-            this.textBox61.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.1D), Telerik.Reporting.Drawing.Unit.Inch(0.446D));
+            this.textBox61.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0.1D), Telerik.Reporting.Drawing.Unit.Inch(0.4D));
             this.textBox61.Name = "textBox61";
             this.textBox61.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(0.9D), Telerik.Reporting.Drawing.Unit.Inch(0.4D));
             this.textBox61.Style.Font.Bold = false;
@@ -1523,7 +1523,7 @@ namespace iFMIS_BMS.Reports
             // 
             // textBox91
             // 
-            this.textBox91.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.8D), Telerik.Reporting.Drawing.Unit.Inch(0.522D));
+            this.textBox91.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(4.8D), Telerik.Reporting.Drawing.Unit.Inch(0.476D));
             this.textBox91.Name = "textBox91";
             this.textBox91.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.3D), Telerik.Reporting.Drawing.Unit.Inch(0.4D));
             this.textBox91.Style.Font.Bold = false;
@@ -1551,7 +1551,7 @@ namespace iFMIS_BMS.Reports
             // 
             this.textBox89.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(6D), Telerik.Reporting.Drawing.Unit.Inch(1.469D));
             this.textBox89.Name = "textBox89";
-            this.textBox89.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.09D), Telerik.Reporting.Drawing.Unit.Inch(0.299D));
+            this.textBox89.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(2.09D), Telerik.Reporting.Drawing.Unit.Inch(0.209D));
             this.textBox89.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.Solid;
             this.textBox89.Style.Font.Bold = false;
             this.textBox89.Style.Font.Name = "Tahoma";

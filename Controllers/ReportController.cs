@@ -4528,7 +4528,7 @@ namespace iFMIS_BMS.Controllers
                                         if (accountid == 2861)
                                         {
                                             DataTable prep_id = new DataTable();
-                                            string _sqlprep = "exec sp_BMS_WFP_Preparer_PerActivity_officeowner " + programid + "," + accountid + "," + yearof + ",23," + activityid + "";
+                                            string _sqlprep = "exec sp_BMS_WFP_Preparer_PerActivity_officeowner " + programid + "," + accountid + "," + yearof + ","+ officeid +"," + activityid + "";
                                             prep_id = OleDbHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings["sqldb"].ToString(), System.Data.CommandType.Text, _sqlprep).Tables[0];
                                             if (prep_id.Rows.Count > 0)
                                             {
@@ -7638,7 +7638,7 @@ namespace iFMIS_BMS.Controllers
                                 using (SqlCommand cmd = new SqlCommand("insert into [bacpdfsign].[dbo].[document_attach] ([doc_name],[doc_type],[doc_attachement],[doc_directory],[doc_description],[doc_status_id],[doc_designated],[doc_datetime],[doc_eid],[doc_datetime_update],[doc_code],[doc_signatory_type],[doc_is],[doc_type_id]) " +
                                                                                       "values(@doc_name,@doc_type,@doc_attachement,@location,@doc_description,@doc_status_id,@doc_designated,@doc_datetime,@doc_eid,@doc_datetime_update,@doc_code,@doc_signatory_type,@doc_is,@doc_type_id) ", con))
                                 {
-                                    if (officeid == 63)
+                                    if (officeid == 63) //pdrrmo
                                     {
                                         cmd.Parameters.AddWithValue("@doc_name", strwfpno);
                                         cmd.Parameters.AddWithValue("@doc_type", "0");
@@ -7686,7 +7686,7 @@ namespace iFMIS_BMS.Controllers
                                 using (SqlCommand cmd = new SqlCommand("insert into [bacpdfsign].[dbo].[document_attach] ([doc_name],[doc_type],[doc_attachement],[doc_directory],[doc_description],[doc_status_id],[doc_designated],[doc_datetime],[doc_eid],[doc_datetime_update],[doc_code],[doc_signatory_type],[doc_is],[doc_type_id]) " +
                                                                                       "values(@doc_name,@doc_type,@doc_attachement,@location,@doc_description,@doc_status_id,@doc_designated,@doc_datetime,@doc_eid,@doc_datetime_update,@doc_code,@doc_signatory_type,@doc_is,@doc_type_id) ", con))
                                 {
-                                    if (officeid == 63)
+                                    if (officeid == 63) //pdrrmo
                                     {
                                         cmd.Parameters.AddWithValue("@doc_name", strwfpno);
                                         cmd.Parameters.AddWithValue("@doc_type", "0");
@@ -7694,6 +7694,26 @@ namespace iFMIS_BMS.Controllers
                                         cmd.Parameters.AddWithValue("@doc_description", strwfpnofile.Replace("'", "''").ToString());
                                         cmd.Parameters.AddWithValue("@doc_status_id", "1");
                                         cmd.Parameters.AddWithValue("@doc_designated", prep_userid + ",365263," + prep_dephead + ",59," + recomapproval2 + ",344880," + sign_eid_gov);
+                                        cmd.Parameters.AddWithValue("@doc_datetime", DateTime.Now);
+                                        cmd.Parameters.AddWithValue("@doc_eid", prep_userid);
+                                        cmd.Parameters.AddWithValue("@doc_datetime_update", "");
+                                        cmd.Parameters.AddWithValue("@doc_code", str_random);
+                                        cmd.Parameters.AddWithValue("@doc_signatory_type", "1");
+                                        cmd.Parameters.AddWithValue("@doc_is", "11");
+                                        cmd.Parameters.AddWithValue("@doc_type_id", 11);
+                                        cmd.Parameters.Add("@doc_attachement", SqlDbType.VarBinary).Value = fileData;
+
+                                        con.Open();
+                                        cmd.ExecuteNonQuery();
+                                    }
+                                    else if (officeid == 1) //pgo
+                                    {
+                                        cmd.Parameters.AddWithValue("@doc_name", strwfpno);
+                                        cmd.Parameters.AddWithValue("@doc_type", "0");
+                                        cmd.Parameters.AddWithValue("@location", "'bms/Report'");
+                                        cmd.Parameters.AddWithValue("@doc_description", strwfpnofile.Replace("'", "''").ToString());
+                                        cmd.Parameters.AddWithValue("@doc_status_id", "1");
+                                        cmd.Parameters.AddWithValue("@doc_designated", prep_userid + ",0,303955,59," + recomapproval2 + ",344880," + sign_eid_gov);
                                         cmd.Parameters.AddWithValue("@doc_datetime", DateTime.Now);
                                         cmd.Parameters.AddWithValue("@doc_eid", prep_userid);
                                         cmd.Parameters.AddWithValue("@doc_datetime_update", "");
