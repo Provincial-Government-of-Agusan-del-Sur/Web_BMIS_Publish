@@ -215,9 +215,13 @@
         var otherindiv_id = $("#otherindiv_id").val()
         var approveby = $("#approveby").val() == null? 0 : $("#approveby").val()
 
-        if ($("#cttsaccessid").val() == "True" && $("#cttsno").val() == "" && stat_code == 77 && chkcafoa==1) {
+        //if ($("#cttsaccessid").val() == "True" && $("#cttsno").val() == "" && stat_code == 77 && chkcafoa==1) {
+        //    swal("Something went wrong!!!", "Please re-scan the QR CODE!", "warning")
+        //    $("#cttsno").focus();
+        //}
+        if ($("#cttsaccessid").val() == "True" && stat_code == 77 && chkcafoa == 1) {
             swal("Something went wrong!!!", "Please re-scan the QR CODE!", "warning")
-            $("#cttsno").focus();
+          //  $("#cttsno").focus();
         }
         else if ($("#OBRNo").val().length != 19 && $("#TransactionModeOUT").val() == 2) {
             swal("System Notice", "No OBR No. found!", "warning");
@@ -290,10 +294,10 @@
             } else {
                 isPastYear = 0;
             }
-            if ($("#lguid").val() == 0 && cttsno == 0) {
-                swal("Warning", "Please input the QR number in the field!", "warning")
-            }
-            else {
+            //if ($("#lguid").val() == 0 && cttsno == 0) {
+            //    swal("Warning", "Please input the QR number in the field!", "warning")
+            //}
+            //else {
                 var url = CheckInOBR();
                 $.get(url, { FundID: FundID, UserInTimeStamp: UserInTimeStamp, UserID: UserID, RefNo: RefNo, isPastYear: isPastYear, cttsno: cttsno, obrno: obrno, chkcafoa: chkcafoa, tyear: tyear, officeassign: officeassign }, function (e) {
 
@@ -337,7 +341,7 @@
                     }
 
                 });
-            }
+            //}
         } else if (TransactionMode == 2) {
             if ($("#UserOutTimeStamp").val() == "") {
                 var trnno = $("#trnno").val();
