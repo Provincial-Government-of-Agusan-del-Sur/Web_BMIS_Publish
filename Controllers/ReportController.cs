@@ -6343,6 +6343,8 @@ namespace iFMIS_BMS.Controllers
                                 loc.status = Convert.ToString(reader.GetValue(11));
                                 loc.gov_sig = Convert.ToInt32(reader.GetValue(12));
                                 loc.docid = Convert.ToInt32(reader.GetValue(13));
+                                loc.wfpno = Convert.ToString(reader.GetValue(14));
+                                loc.account = Convert.ToString(reader.GetValue(15));
                                 prog.Add(loc);
                             }
                         }
@@ -6369,6 +6371,8 @@ namespace iFMIS_BMS.Controllers
                                 loc.status = Convert.ToString(reader.GetValue(11));
                                 loc.gov_sig = Convert.ToInt32(reader.GetValue(12));
                                 loc.docid = Convert.ToInt32(reader.GetValue(13));
+                                loc.wfpno = "";
+                                loc.account = "";
                                 prog.Add(loc);
                             }
                         }
@@ -6396,6 +6400,8 @@ namespace iFMIS_BMS.Controllers
                             loc.status = Convert.ToString(reader.GetValue(11));
                             loc.gov_sig = Convert.ToInt32(reader.GetValue(12));
                             loc.docid = Convert.ToInt32(reader.GetValue(13));
+                            loc.wfpno = "";
+                            loc.account = "";
                             prog.Add(loc);
                         }
                     }
@@ -6451,6 +6457,8 @@ namespace iFMIS_BMS.Controllers
                                 loc.status = Convert.ToString(reader.GetValue(11));
                                 loc.gov_sig = Convert.ToInt32(reader.GetValue(12));
                                 loc.docid = Convert.ToInt32(reader.GetValue(13));
+                                loc.wfpno = Convert.ToString(reader.GetValue(14));
+                                loc.account = Convert.ToString(reader.GetValue(15));
                                 prog.Add(loc);
                             }
                         }
@@ -6477,6 +6485,8 @@ namespace iFMIS_BMS.Controllers
                                 loc.status = Convert.ToString(reader.GetValue(11));
                                 loc.gov_sig = Convert.ToInt32(reader.GetValue(12));
                                 loc.docid = Convert.ToInt32(reader.GetValue(13));
+                                loc.wfpno = "";
+                                loc.account = "";
                                 prog.Add(loc);
                             }
                         }
@@ -6503,6 +6513,8 @@ namespace iFMIS_BMS.Controllers
                             loc.status = Convert.ToString(reader.GetValue(11));
                             loc.gov_sig = Convert.ToInt32(reader.GetValue(12));
                             loc.docid = Convert.ToInt32(reader.GetValue(13));
+                            loc.wfpno = "";
+                            loc.account = "";
                             prog.Add(loc);
                         }
                     }

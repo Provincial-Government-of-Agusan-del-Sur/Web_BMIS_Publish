@@ -88,6 +88,26 @@
             }
         });
     });
+
+    function rtpwdp(status, docid, gov_sig, programid, accountid, wfpno, account, ooe) {
+        var officeid = $("#officestatus").val();
+        var yearof = $("#wfpyear").val();
+        var officename = $("#officestatus").data("kendoComboBox").text()
+        if ((accountid == 0 || accountid.length > 6) && repHistory == 0) {
+            swal("Warning", "Please select an account from the dropdown list!", "warning")
+        }
+        else {
+            
+            $.ajax({
+                async: false,
+                dataType: 'html',
+                success: window.open("../Reports/ReportViewer.aspx?rid=44&OfficeID=" + officeid + "&year=" + yearof + "&OfficeName=" + officename + "&accountID=" + accountid + "&accountname=" + account + "&ooeclass=" + ooe + "&account=" + account + "&wfpno=" + wfpno + "")
+
+            });
+           
+        }
+    }
+
     function rtpwfp(status,docid,gov_sig){
        
         success: window.open("https://pgas.ph/dgsign/blank/getPDF_digital_only?pdfData=application/pdf&FormID=" + docid + "")
@@ -208,7 +228,7 @@
             .ClientTemplate("<div>#=accountid# </div>");
                 col.Template(@<text></text>)
             .HeaderTemplate(@<text>Account</text>)
-            .Width(230)
+            .Width(180)
             .HtmlAttributes(new { style = "text-align:left;;font-size:12px;vertical-align:top" })
             .HeaderHtmlAttributes(new { style = "text-align:center;vertical-align:middle;height:20px;background-color:#ff6a00;font-size:14px;color:beige;" })
             .ClientTemplate("<div>#=accountname# </div>");
@@ -249,7 +269,7 @@
             .ClientTemplate("<div>#=remarks# </div>");
             col.Bound(m => m.status)
             .HeaderTemplate(@<text>Signature <br />Status</text>)
-            .Width(100)
+            .Width(60)
             .HtmlAttributes(new { style = "text-align:left;vertical-align:top" })
             .HeaderHtmlAttributes(new { style = "text-align:center;vertical-align:middle;height:20px;background-color:#ff6a00;font-size:14px;color:beige;" })
             .ClientTemplate("<div>#=status# </div>");
@@ -261,6 +281,14 @@
                 "<div id='printwfpid#=accountid#' style='color:blue;cursor:pointer' onclick='wfptransfer(#=docid#)'><span class='fa fa-arrow-right-arrow-left' title='Click to transfer preparer!' style='font-size: 16px;margin-top: -1px;margin-left: 1px;margin-right:1px;width:35px;text-align:center;cursor:pointer;'></span>Transfer</div> ")
             .HtmlAttributes(new { style = "vertical-align: middle;text-align:center;vertical-align:top" })
             .Width(75);
+
+             col.Template(@<text></text>)
+            .HeaderTemplate(@<text>View<br />WFP/WDP</text>)
+            .HeaderHtmlAttributes(new { style = "text-align:center;vertical-align:middle;height:30px;background-color:#ff6a00;font-size:14px;color:beige;" })
+            .ClientTemplate(
+                "<div id='printwfpid#=accountid#' style='color:red;cursor:pointer' onclick='rtpwdp(\"#=status#\",#=docid#,#=gov_sig#,#=programid#,#=accountid#,\"#=wfpno#\",\"#=account#\",\"#=ooe#\")'><span class='fa fa-file' title='Click to preview WFP!' style='font-size: 16px;margin-top: -1px;margin-left: 1px;margin-right:1px;width:25px;text-align:center;cursor:pointer;'></span>WFP</div> ")
+            .HtmlAttributes(new { style = "vertical-align: middle;text-align:center;vertical-align:top" })
+            .Width(70);
 
              col.Template(@<text></text>)
             .HeaderTemplate(@<text>View<br />PDF</text>)

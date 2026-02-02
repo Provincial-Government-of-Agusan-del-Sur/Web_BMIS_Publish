@@ -12,6 +12,7 @@ namespace iFMIS_BMS.BusinessLayer.Models
         public int programid { get; set; }
         public long accountid { get; set; }
         public string accountname { get; set; }
+        public string account { get; set; }
         public int activityid { get; set; }
         public string activityname { get; set; }
         public string specificactivity { get; set; }

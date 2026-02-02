@@ -859,6 +859,12 @@
     <Compile Include="Reports\WFP.Designer.cs">
       <DependentUpon>WFP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\WFDP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\WFDP.designer.cs">
+      <DependentUpon>WFDP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\WFPNewExcess.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -4069,6 +4075,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\WFP.resx">
       <DependentUpon>WFP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\WFDP.resx">
+      <DependentUpon>WFDP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\WFPNewExcess.resx">
       <DependentUpon>WFPNewExcess.cs</DependentUpon>

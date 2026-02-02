@@ -99,7 +99,7 @@ namespace iFMIS_BMS.Reports
                 DataTable _dtreserve = new DataTable();
                 string _sqlreserve = "";
 
-                //don't try to update retention - source code order - start
+                //retention - start
                 if (fundid == 0)
                 {
                     if (specid != 0) //per specific activity
@@ -133,11 +133,6 @@ namespace iFMIS_BMS.Reports
                                 textBox159.CanShrink = true;
 
                             }
-                            //textBox145.Value = _dtreserve.Rows[0][2].ToString();
-                            //textBox147.Value = _dtreserve.Rows[0][3].ToString();
-                            //textBox149.Value = _dtreserve.Rows[0][4].ToString();
-                            //textBox152.Value = _dtreserve.Rows[0][5].ToString();
-                            //textBox155.Value = _dtreserve.Rows[0][6].ToString();
 
                         }
                     }
@@ -175,12 +170,7 @@ namespace iFMIS_BMS.Reports
                                 textBox159.CanShrink = true;
 
                             }
-                            //textBox145.Value = _dtreserve.Rows[0][2].ToString();
-                            //textBox147.Value = _dtreserve.Rows[0][3].ToString();
-                            //textBox149.Value = _dtreserve.Rows[0][4].ToString();
-                            //textBox152.Value = _dtreserve.Rows[0][5].ToString();
-                            //textBox155.Value = _dtreserve.Rows[0][6].ToString();
-
+                     
                         }
                     }
                 }
@@ -204,15 +194,9 @@ namespace iFMIS_BMS.Reports
                         textBox134.CanShrink = true;
                         textBox159.Visible = false;
                         textBox159.CanShrink = true;
-
-                        //textBox145.Value = _dtreserve.Rows[0][2].ToString();
-                        //textBox147.Value = _dtreserve.Rows[0][3].ToString();
-                        //textBox149.Value = _dtreserve.Rows[0][4].ToString();
-                        //textBox152.Value = _dtreserve.Rows[0][5].ToString();
-                        //textBox155.Value = _dtreserve.Rows[0][6].ToString();
                     }
                 }
-                //don't try to update retention - source code order - end
+                //retention -  end
                 if (fundid == 0) // GF
                 {
                     if (specid != 0) {
@@ -292,9 +276,7 @@ namespace iFMIS_BMS.Reports
                     }
                     table1.DataSource = dt1;
                 }
-                //DataTable _dtreserve = new DataTable();
-                //string _sqlreserve = "";
-
+               
                 if (fundid == 0)
                 {
                     if (specid != 0) //per specific activity
@@ -362,7 +344,7 @@ namespace iFMIS_BMS.Reports
                 {
                     if (accountID == 2861)
                     {
-                        _sqlQuery = "exec [dbo].[sp_BMS_WFP_Preparer_PerActivity_officeowner] " + programid + "," + accountID + "," + year + ",23,"+ activityid + "";
+                        _sqlQuery = "exec [dbo].[sp_BMS_WFP_Preparer_PerActivity_officeowner] " + programid + "," + accountID + "," + year + ","+ office + ","+ activityid + "";
                     }
                     else
                     {
