@@ -18,9 +18,9 @@ namespace iFMIS_BMS.Reports
     /// <summary>
     /// Summary description for Report1.
     /// </summary>
-    public partial class SAAO_Excess : Telerik.Reporting.Report
+    public partial class SAAO_Excess_Summary : Telerik.Reporting.Report
     {
-        public SAAO_Excess(int? Fundtype, string changed_To, int? month_, int? month_To, int? year,int? tyear)
+        public SAAO_Excess_Summary(int? Fundtype, string changed_To, int? month_, int? month_To, int? year,int? tyear)
         {
          
             InitializeComponent();
@@ -65,7 +65,7 @@ namespace iFMIS_BMS.Reports
 
             using (SqlConnection con = new SqlConnection(Common.MyConn()))
             {
-                SqlCommand com = new SqlCommand(@"IFMIS.dbo.sp_BMS_BOIExcess_SAAO '" + changed_To + "'," + Fundtype + "," + month_ + "," + month_To + ",0," + Account.UserInfo.eid + ",0", con);
+                SqlCommand com = new SqlCommand(@"IFMIS.dbo.sp_BMS_BOIExcess_SAAO '" + changed_To + "'," + Fundtype + "," + month_ + "," + month_To + ",0," + Account.UserInfo.eid + ",1", con);
                 con.Open();
                 com.CommandTimeout = 0;
                 dt3.Load(com.ExecuteReader());
@@ -73,19 +73,7 @@ namespace iFMIS_BMS.Reports
             }
             this.table2.DataSource = dt3;
           
-
-            TXT_for_the.Value = "As Of C.Y. " + tyear;
-
-
-           
-            //using (SqlConnection con = new SqlConnection(Common.MyConn()))
-            //{
-            //    SqlCommand com = new SqlCommand(@"select Class_Type FROM IFMIS.dbo.tbl_R_BMS_A_Class where Class_ID = '1'", con);
-            //    con.Open();
-            //    TXT_fund_type.Value = com.ExecuteScalar().ToString();
-
-            //}
-            //barcode1.Value = FUNCTION.GeneratePISControl();
+          
             DataTable reportlog = new DataTable();
             using (SqlConnection conUser = new SqlConnection(Common.MyConn()))
             {

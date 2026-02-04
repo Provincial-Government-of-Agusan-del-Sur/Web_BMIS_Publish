@@ -16,6 +16,7 @@ namespace iFMIS_BMS.Reports
     public partial class ReportViewer : System.Web.UI.Page
     {
         InstanceReportSource rs = new InstanceReportSource();
+        InstanceReportSource rs2 = new InstanceReportSource();
         ReportBook rb = new ReportBook();
         ReportBook rbf4 = new ReportBook();
         protected void Page_Load(object sender, EventArgs e)
@@ -136,6 +137,8 @@ namespace iFMIS_BMS.Reports
             int previewid = 0;
             int reptype = 0;
             int tyear = 0;
+            var office = "";
+            var wfpno = "";
             // int[] accountidlist = new int[] { }; 
             // string[] accountidlist= new string[] { };
 
@@ -738,6 +741,16 @@ namespace iFMIS_BMS.Reports
                 tyear = Convert.ToInt32(Request["tyear"].ToString());
             }
             catch { }
+            try
+            {
+                office = Convert.ToString(Request["office"].ToString());
+            }
+            catch { }
+            try
+            {
+                wfpno = Convert.ToString(Request["wfpno"].ToString());
+            }
+            catch { }
             var rid = Request.QueryString["rid"];
             if (rid == "2")
             {
@@ -942,7 +955,15 @@ namespace iFMIS_BMS.Reports
                     rs.ReportDocument = new SAAO_Excess(Fundtype, changed_To, month_, month_To, year, tyear);
                     RV.ViewMode = Telerik.ReportViewer.WebForms.ViewMode.PrintPreview;
                     RV.ReportSource = rs;
+                    
                 }
+            }
+            else if (rid == "151")
+            {
+                    rs2.ReportDocument = new SAAO_Excess_Summary(Fundtype, changed_To, month_, month_To, year, tyear);
+                    RV.ViewMode = Telerik.ReportViewer.WebForms.ViewMode.PrintPreview;
+                    RV.ReportSource = rs2;
+                
             }
             else if (rid == "16")
             {
@@ -1358,7 +1379,7 @@ namespace iFMIS_BMS.Reports
                 RV.ShowExportGroup = false;
                 RV.ReportSource = rs;
             }
-            else if (rid == "37") // WFP
+            else if (rid == "37" || rid == "44") // WFP
             {
                 //if (accountID == 0)
                 //{
@@ -1369,28 +1390,37 @@ namespace iFMIS_BMS.Reports
                 //}
                 //else
                 //{
-                if (fundid == 0)
-                { //gf
-                    if (mode_trans == 1)
-                    {
-                        rs.ReportDocument = new WFPNew(year, OfficeID, project_id, fundsource, OfficeName, ProjectName, funddescription, repHistory, prepby, printstatus, projectaip, fundsourcename, accountID, accountname, municipal, barangay, ooeclass, pgas_loc, 0, programID, activityid, fundid, 0, specid, issupplemetalid);
-                        RV.ViewMode = Telerik.ReportViewer.WebForms.ViewMode.PrintPreview;
-                        RV.ShowExportGroup = false;
-                    }
-                    else
-                    {
-                        rs.ReportDocument = new WFPNewExcess(year, OfficeID, project_id, fundsource, OfficeName, ProjectName, funddescription, repHistory, prepby, printstatus, projectaip, fundsourcename, accountID, accountname, municipal, barangay, ooeclass, pgas_loc, 0, programID, activityid, fundid);
-                        RV.ViewMode = Telerik.ReportViewer.WebForms.ViewMode.PrintPreview;
-                        RV.ShowExportGroup = false;
-                    }
-                }
-                else //tf
+                if (rid == "44") //for DFPPT to WFP
                 {
-                    rs.ReportDocument = new WFPNewTF(year, OfficeID, project_id, fundsource, OfficeName, ProjectName, funddescription, repHistory, prepby, printstatus, projectaip, fundsourcename, accountID, accountname, municipal, barangay, ooeclass, pgas_loc, 0, programID, activityid, fundid);
+                    rs.ReportDocument = new WFDP(year, OfficeName, printstatus, accountID, accountname, ooeclass, wfpno, OfficeID);
                     RV.ViewMode = Telerik.ReportViewer.WebForms.ViewMode.PrintPreview;
                     RV.ShowExportGroup = false;
                 }
-                  //  RV.ShowPrintButton = false;
+                else
+                {
+                    if (fundid == 0)
+                    { //gf
+                        if (mode_trans == 1)
+                        {
+                            rs.ReportDocument = new WFPNew(year, OfficeID, project_id, fundsource, OfficeName, ProjectName, funddescription, repHistory, prepby, printstatus, projectaip, fundsourcename, accountID, accountname, municipal, barangay, ooeclass, pgas_loc, 0, programID, activityid, fundid, 0, specid, issupplemetalid);
+                            RV.ViewMode = Telerik.ReportViewer.WebForms.ViewMode.PrintPreview;
+                            RV.ShowExportGroup = false;
+                        }
+                        else
+                        {
+                            rs.ReportDocument = new WFPNewExcess(year, OfficeID, project_id, fundsource, OfficeName, ProjectName, funddescription, repHistory, prepby, printstatus, projectaip, fundsourcename, accountID, accountname, municipal, barangay, ooeclass, pgas_loc, 0, programID, activityid, fundid);
+                            RV.ViewMode = Telerik.ReportViewer.WebForms.ViewMode.PrintPreview;
+                            RV.ShowExportGroup = false;
+                        }
+                    }
+                    else //tf
+                    {
+                        rs.ReportDocument = new WFPNewTF(year, OfficeID, project_id, fundsource, OfficeName, ProjectName, funddescription, repHistory, prepby, printstatus, projectaip, fundsourcename, accountID, accountname, municipal, barangay, ooeclass, pgas_loc, 0, programID, activityid, fundid);
+                        RV.ViewMode = Telerik.ReportViewer.WebForms.ViewMode.PrintPreview;
+                        RV.ShowExportGroup = false;
+                    }
+                    //  RV.ShowPrintButton = false;
+                }
                     RV.ReportSource = rs;
             }
             else if (rid == "38")

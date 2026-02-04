@@ -58,6 +58,12 @@
                 dataType: 'html',
                 success: window.open("../Reports/ReportViewer.aspx?rid=15&Fundtype=" + Fundtype + "&changed_To=" + changed_To + "&month_=" + month_ + "&month_To=" + month_To + "&year=" + year + "&air=" + air + "&pgo_="+pgo+"&repxmlhistory=" + rephistory + "&reptype="+reptype+"&tyear="+tyear+"")
             });
+
+            $.ajax({
+                async: false,
+                dataType: 'html',
+                success: window.open("../Reports/ReportViewer.aspx?rid=151&Fundtype=" + Fundtype + "&changed_To=" + changed_To + "&month_=" + month_ + "&month_To=" + month_To + "&year=" + year + "&air=" + air + "&pgo_="+pgo+"&repxmlhistory=" + rephistory + "&reptype="+reptype+"&tyear="+tyear+"")
+            });
         }
     }
 
