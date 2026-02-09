@@ -7670,6 +7670,26 @@ namespace iFMIS_BMS.Controllers
                                         con.Open();
                                         cmd.ExecuteNonQuery();
                                     }
+                                    else if (officeid == 1)
+                                    {
+                                        cmd.Parameters.AddWithValue("@doc_name", strwfpno);
+                                        cmd.Parameters.AddWithValue("@doc_type", "0");
+                                        cmd.Parameters.AddWithValue("@location", "'bms/Report'");
+                                        cmd.Parameters.AddWithValue("@doc_description", strwfpnofile.Replace("'", "''").ToString());
+                                        cmd.Parameters.AddWithValue("@doc_status_id", "1");
+                                        cmd.Parameters.AddWithValue("@doc_designated", prep_userid + "," + prep_dephead + ",303955," + recomapproval2 + ",344880");
+                                        cmd.Parameters.AddWithValue("@doc_datetime", DateTime.Now);
+                                        cmd.Parameters.AddWithValue("@doc_eid", prep_userid);
+                                        cmd.Parameters.AddWithValue("@doc_datetime_update", "");
+                                        cmd.Parameters.AddWithValue("@doc_code", str_random);
+                                        cmd.Parameters.AddWithValue("@doc_signatory_type", "1");
+                                        cmd.Parameters.AddWithValue("@doc_is", "11");
+                                        cmd.Parameters.AddWithValue("@doc_type_id", 11);
+                                        cmd.Parameters.Add("@doc_attachement", SqlDbType.VarBinary).Value = fileData;
+
+                                        con.Open();
+                                        cmd.ExecuteNonQuery();
+                                    }
                                     else
                                     {
                                         cmd.Parameters.AddWithValue("@doc_name", strwfpno);
