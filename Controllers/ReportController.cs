@@ -6132,7 +6132,7 @@ namespace iFMIS_BMS.Controllers
                             var msg = "Good day, " + tempusername + ". The Work and Financial Plan (WFP) for " + tempaccount + " has been returned by " + empnamereturn + ". \n\nThis is a system-generated message. Please do not reply.";
                             con.Close();
                             ////exec[pmis].[dbo].[nald_sp_api_sms_sender]  @recipient, @message, @isid
-                            SqlCommand comSMS = new SqlCommand(@"exec [pmis].[dbo].[nald_sp_api_sms_sender] '" + tempcpno + "','" + msg + "', 1414 ", con);
+                            SqlCommand comSMS = new SqlCommand(@"exec [pmis].[dbo].[nald_sp_api_sms_sender] '" + tempcpno + "','" + msg.Replace("'","").ToString() + "', 1414 ", con);
                             con.Open();
                             smsresult = Convert.ToString(comSMS.ExecuteScalar());
                             
@@ -6144,9 +6144,6 @@ namespace iFMIS_BMS.Controllers
                     //send sms=============================================
 
                     return com.ExecuteScalar().ToString();
-
-
-
                 }
 
             }
