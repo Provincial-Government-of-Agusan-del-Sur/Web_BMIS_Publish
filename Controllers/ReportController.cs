@@ -4824,7 +4824,7 @@ namespace iFMIS_BMS.Controllers
                                                         cmd.Parameters.AddWithValue("@location", "'bms/WFP'");
                                                         cmd.Parameters.AddWithValue("@doc_description", strwfpnofile.Replace("'", "''").ToString());
                                                         cmd.Parameters.AddWithValue("@doc_status_id", "1");
-                                                        cmd.Parameters.AddWithValue("@doc_designated", prep_userid + ",303955,59," + recomapproval2 + ",344880," + sign_eid_gov);
+                                                        cmd.Parameters.AddWithValue("@doc_designated", prep_userid + ",0,303955,59," + recomapproval2 + ",344880," + sign_eid_gov);
                                                         cmd.Parameters.AddWithValue("@doc_datetime", DateTime.Now);
                                                         cmd.Parameters.AddWithValue("@doc_eid", prep_userid);
                                                         cmd.Parameters.AddWithValue("@doc_datetime_update", "");
@@ -4848,7 +4848,7 @@ namespace iFMIS_BMS.Controllers
                                                         cmd.Parameters.AddWithValue("@location", "'bms/WFP'");
                                                         cmd.Parameters.AddWithValue("@doc_description", strwfpnofile.Replace("'", "''").ToString());
                                                         cmd.Parameters.AddWithValue("@doc_status_id", "1");
-                                                        cmd.Parameters.AddWithValue("@doc_designated", prep_userid + ",303955,59," + recomapproval2 + ",344880," + sign_eid_gov);
+                                                        cmd.Parameters.AddWithValue("@doc_designated", prep_userid + ",0,303955,59," + recomapproval2 + ",344880," + sign_eid_gov);
                                                         cmd.Parameters.AddWithValue("@doc_datetime", DateTime.Now);
                                                         cmd.Parameters.AddWithValue("@doc_eid", prep_userid);
                                                         cmd.Parameters.AddWithValue("@doc_datetime_update", "");
@@ -7674,7 +7674,7 @@ namespace iFMIS_BMS.Controllers
                                         cmd.Parameters.AddWithValue("@location", "'bms/Report'");
                                         cmd.Parameters.AddWithValue("@doc_description", strwfpnofile.Replace("'", "''").ToString());
                                         cmd.Parameters.AddWithValue("@doc_status_id", "1");
-                                        cmd.Parameters.AddWithValue("@doc_designated", prep_userid + "," + prep_dephead + ",303955," + recomapproval2 + ",344880");
+                                        cmd.Parameters.AddWithValue("@doc_designated", prep_userid + ",0,303955," + recomapproval2 + ",344880");
                                         cmd.Parameters.AddWithValue("@doc_datetime", DateTime.Now);
                                         cmd.Parameters.AddWithValue("@doc_eid", prep_userid);
                                         cmd.Parameters.AddWithValue("@doc_datetime_update", "");
