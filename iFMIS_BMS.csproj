@@ -1710,6 +1710,7 @@
     <Content Include="Content\images\img_not_available.png" />
     <Content Include="Content\images\ios-linen.jpg" />
     <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\logo_31x31.png" />
     <Content Include="Content\images\no_avatar_available.jpg" />
     <Content Include="Content\images\page_not_available_sprite.png" />
     <Content Include="Content\images\pgas_25x25.png" />
@@ -2670,6 +2671,7 @@
     <Content Include="Content\themes\yellowGreen\yellowGreen.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\logo_31x31.png" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\background-main.jpg" />
     <Content Include="Images\background.png" />
