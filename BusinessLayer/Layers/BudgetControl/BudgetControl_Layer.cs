@@ -304,7 +304,7 @@ namespace iFMIS_BMS.BusinessLayer.Layers.BudgetControl
                 if (Account.UserInfo.lgu == 0) //PGAS
                 {
                     TransactionNo = TransactionNo == 0 ? 0 : TransactionNo;
-                    SqlCommand query = new SqlCommand(@"dbo.sp_BMS_searchOBRDetails " + TransactionNo + "", con);
+                    SqlCommand query = new SqlCommand(@"dbo.sp_BMS_searchOBRDetails_year " + TransactionNo + "," + tyear + "", con);
                     con.Open();
                     SqlDataReader reader = query.ExecuteReader();
                     while (reader.Read())
