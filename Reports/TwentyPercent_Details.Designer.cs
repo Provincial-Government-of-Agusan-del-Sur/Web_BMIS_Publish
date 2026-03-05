@@ -104,6 +104,7 @@ namespace iFMIS_BMS.Reports
             this.textBox54 = new Telerik.Reporting.TextBox();
             this.textBox55 = new Telerik.Reporting.TextBox();
             this.textBox62 = new Telerik.Reporting.TextBox();
+            this.textBox64 = new Telerik.Reporting.TextBox();
             this.textBox4 = new Telerik.Reporting.TextBox();
             this.textBox34 = new Telerik.Reporting.TextBox();
             this.pageFooterSection1 = new Telerik.Reporting.PageFooterSection();
@@ -115,7 +116,6 @@ namespace iFMIS_BMS.Reports
             this.reportHeaderSection1 = new Telerik.Reporting.ReportHeaderSection();
             this.textBox1 = new Telerik.Reporting.TextBox();
             this.textBox2 = new Telerik.Reporting.TextBox();
-            this.textBox64 = new Telerik.Reporting.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // textBox11
@@ -415,6 +415,7 @@ namespace iFMIS_BMS.Reports
             this.textBox31,
             this.textBox32,
             this.textBox59,
+            this.textBox64,
             this.textBox58,
             this.textBox63,
             this.textBox62,
@@ -434,8 +435,7 @@ namespace iFMIS_BMS.Reports
             this.textBox3,
             this.textBox51,
             this.textBox52,
-            this.textBox44,
-            this.textBox64});
+            this.textBox44});
             this.table1.Location = new Telerik.Reporting.Drawing.PointU(Telerik.Reporting.Drawing.Unit.Inch(0D), Telerik.Reporting.Drawing.Unit.Inch(0D));
             this.table1.Name = "table1";
             tableGroup15.Name = "group18";
@@ -877,7 +877,7 @@ namespace iFMIS_BMS.Reports
             this.textBox59.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox59.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox59.StyleName = "";
-            this.textBox59.Value = "=cdbl(TotalAppropriation)";
+            this.textBox59.Value = "=sum(cdbl(Appropriation))";
             // 
             // textBox56
             // 
@@ -975,6 +975,24 @@ namespace iFMIS_BMS.Reports
             this.textBox62.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
             this.textBox62.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox62.StyleName = "";
+            // 
+            // textBox64
+            // 
+            formattingRule2.Filters.Add(new Telerik.Reporting.Filter("=description", Telerik.Reporting.FilterOperator.NotEqual, "=description"));
+            formattingRule2.StopIfTrue = true;
+            this.textBox64.ConditionalFormatting.AddRange(new Telerik.Reporting.Drawing.FormattingRule[] {
+            formattingRule2});
+            this.textBox64.Format = "{0:N2}";
+            this.textBox64.Name = "textBox64";
+            this.textBox64.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.01D), Telerik.Reporting.Drawing.Unit.Inch(0.26D));
+            this.textBox64.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
+            this.textBox64.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
+            this.textBox64.Style.Font.Bold = true;
+            this.textBox64.Style.Font.Name = "Tahoma";
+            this.textBox64.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
+            this.textBox64.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
+            this.textBox64.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
+            this.textBox64.StyleName = "";
             // 
             // textBox4
             // 
@@ -1094,24 +1112,6 @@ namespace iFMIS_BMS.Reports
             this.textBox2.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Center;
             this.textBox2.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
             this.textBox2.Value = "As of Date";
-            // 
-            // textBox64
-            // 
-            formattingRule2.Filters.Add(new Telerik.Reporting.Filter("=description", Telerik.Reporting.FilterOperator.NotEqual, "=description"));
-            formattingRule2.StopIfTrue = true;
-            this.textBox64.ConditionalFormatting.AddRange(new Telerik.Reporting.Drawing.FormattingRule[] {
-            formattingRule2});
-            this.textBox64.Format = "{0:N2}";
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new Telerik.Reporting.Drawing.SizeU(Telerik.Reporting.Drawing.Unit.Inch(1.01D), Telerik.Reporting.Drawing.Unit.Inch(0.26D));
-            this.textBox64.Style.BorderStyle.Default = Telerik.Reporting.Drawing.BorderType.Solid;
-            this.textBox64.Style.BorderStyle.Top = Telerik.Reporting.Drawing.BorderType.None;
-            this.textBox64.Style.Font.Bold = true;
-            this.textBox64.Style.Font.Name = "Tahoma";
-            this.textBox64.Style.Font.Size = Telerik.Reporting.Drawing.Unit.Point(8D);
-            this.textBox64.Style.TextAlign = Telerik.Reporting.Drawing.HorizontalAlign.Right;
-            this.textBox64.Style.VerticalAlign = Telerik.Reporting.Drawing.VerticalAlign.Middle;
-            this.textBox64.StyleName = "";
             // 
             // TwentyPercent_Details
             // 
