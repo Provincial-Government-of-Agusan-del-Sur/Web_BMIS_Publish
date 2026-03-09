@@ -2298,12 +2298,14 @@ namespace iFMIS_BMS.Controllers
                             if (applied80per == 0)
                             {
                                 SqlCommand com = new SqlCommand(@"exec dbo.sp_bms_InsertWFP_DFPPT " + officeid + ", " + programid + ", " + accountid + ", " + activity + ", '" + activityspecific.Replace("'", "''").ToString() + "', '" + itemname.Replace("'", "''").ToString() + "', '" + unit.Replace("'", "''").ToString() + "', '" + weight.Replace("'", "''").ToString() + "', " + m1 + ", " + m2 + ", " + m3 + ", " + m4 + ", " + m5 + ", " + m6 + ", " + m7 + ", " + m8 + ", " + m9 + ", " + m10 + ", " + m11 + ", " + m12 + ", " + totalqty + ", " + amount + ", " + days + ", " + totamount + ", '" + ptarget.Replace("'", "''").ToString() + "', '" + indicator.Replace("'", "''").ToString() + "', " + resperson + "," + Account.UserInfo.eid + "," + year + "," + wfpid + "," + includeppa + ",'" + description.Replace("'", "''") + "'," + isPPMPTag + "," + MotherAccount + ",'" + fund + "'," + kpmid + "," + fundreqid + "," + breakdownid + ",'" + dtecomple + "','" + firstqtr.Replace("'", "''").ToString() + "','" + secondqtr.Replace("'", "''").ToString() + "' ,'" + thirdqtr.Replace("'", "''").ToString() + "','" + fourthqtr.Replace("'", "''").ToString() + "'," + propoffice + ",'" + dtpckerfrom + "','" + dtpckerto + "'," + supplemetal + "", con);
+                                com.CommandTimeout = 0;
                                 con.Open();
                                 data = Convert.ToString(com.ExecuteScalar());
                             }
                             else //percentage
                             {
                                 SqlCommand com = new SqlCommand(@"exec dbo.sp_bms_InsertWFP_DFPPT_percentage " + officeid + ", " + programid + ", " + accountid + ", " + activity + ", '" + activityspecific.Replace("'", "''").ToString() + "', '" + itemname.Replace("'", "''").ToString() + "', '" + unit.Replace("'", "''").ToString() + "', '" + weight.Replace("'", "''").ToString() + "', " + m1 + ", " + m2 + ", " + m3 + ", " + m4 + ", " + m5 + ", " + m6 + ", " + m7 + ", " + m8 + ", " + m9 + ", " + m10 + ", " + m11 + ", " + m12 + ", " + totalqty + ", " + amount + ", " + days + ", " + totamount + ", '" + ptarget.Replace("'", "''").ToString() + "', '" + indicator.Replace("'", "''").ToString() + "', " + resperson + "," + Account.UserInfo.eid + "," + year + "," + wfpid + "," + includeppa + ",'" + description.Replace("'", "''") + "'," + isPPMPTag + "," + MotherAccount + ",'" + fund + "'," + kpmid + "," + fundreqid + "," + breakdownid + ",'" + dtecomple + "','" + firstqtr.Replace("'", "''").ToString() + "','" + secondqtr.Replace("'", "''").ToString() + "' ,'" + thirdqtr.Replace("'", "''").ToString() + "','" + fourthqtr.Replace("'", "''").ToString() + "'," + propoffice + ",'" + dtpckerfrom + "','" + dtpckerto + "'", con);
+                                com.CommandTimeout = 0;
                                 con.Open();
                                 data = Convert.ToString(com.ExecuteScalar());
                             }
@@ -2311,6 +2313,7 @@ namespace iFMIS_BMS.Controllers
                         else
                         {
                             SqlCommand com = new SqlCommand(@"exec dbo.sp_bms_InsertWFP_DFPPT_Excess " + officeid + ", " + programid + ", " + accountid + ", " + activity + ", '" + activityspecific.Replace("'", "''").ToString() + "', '" + itemname.Replace("'", "''").ToString() + "', '" + unit.Replace("'", "''").ToString() + "', '" + weight.Replace("'", "''").ToString() + "', " + m1 + ", " + m2 + ", " + m3 + ", " + m4 + ", " + m5 + ", " + m6 + ", " + m7 + ", " + m8 + ", " + m9 + ", " + m10 + ", " + m11 + ", " + m12 + ", " + totalqty + ", " + amount + ", " + days + ", " + totamount + ", '" + ptarget.Replace("'", "''").ToString() + "', '" + indicator.Replace("'", "''").ToString() + "', " + resperson + "," + Account.UserInfo.eid + "," + year + "," + wfpid + "," + includeppa + ",'" + description.Replace("'", "''") + "'," + isPPMPTag + "," + MotherAccount + ",'" + fund + "'," + kpmid + "," + fundreqid + "," + breakdownid + ",'" + dtecomple + "','" + firstqtr.Replace("'", "''").ToString() + "','" + secondqtr.Replace("'", "''").ToString() + "' ,'" + thirdqtr.Replace("'", "''").ToString() + "','" + fourthqtr.Replace("'", "''").ToString() + "'," + propoffice + ",'" + project.Replace("'", "''").ToString() + "','" + programexcess.Replace("'", "''").ToString() + "'", con);
+                            com.CommandTimeout = 0;
                             con.Open();
                             data = Convert.ToString(com.ExecuteScalar());
                         }
@@ -2318,6 +2321,7 @@ namespace iFMIS_BMS.Controllers
                     else
                     {
                         SqlCommand com = new SqlCommand(@"exec dbo.sp_bms_InsertWFP_DFPPT_TF " + officeid + ", " + programid + ", " + accountid + ", " + activity + ", '" + activityspecific.Replace("'", "''").ToString() + "', '" + itemname.Replace("'", "''").ToString() + "', '" + unit.Replace("'", "''").ToString() + "', '" + weight.Replace("'", "''").ToString() + "', " + m1 + ", " + m2 + ", " + m3 + ", " + m4 + ", " + m5 + ", " + m6 + ", " + m7 + ", " + m8 + ", " + m9 + ", " + m10 + ", " + m11 + ", " + m12 + ", " + totalqty + ", " + amount + ", " + days + ", " + totamount + ", '" + ptarget.Replace("'", "''").ToString() + "', '" + indicator.Replace("'", "''").ToString() + "', " + resperson + "," + Account.UserInfo.eid + "," + year + "," + wfpid + "," + includeppa + ",'" + description.Replace("'", "''") + "'," + isPPMPTag + "," + MotherAccount + ",'" + fund + "'," + kpmid + "," + fundreqid + "," + breakdownid + ",'" + dtecomple + "','" + firstqtr.Replace("'", "''").ToString() + "','" + secondqtr.Replace("'", "''").ToString() + "' ,'" + thirdqtr.Replace("'", "''").ToString() + "','" + fourthqtr.Replace("'", "''").ToString() + "'," + propoffice + "," + fpaysupplier + "", con);
+                        com.CommandTimeout = 0;
                         con.Open();
                         data = Convert.ToString(com.ExecuteScalar());
                     }
