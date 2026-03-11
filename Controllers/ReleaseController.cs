@@ -939,7 +939,7 @@ namespace iFMIS_BMS.Controllersf
 
                 return Json(lst, JsonRequestBehavior.AllowGet);
             }
-            else if (classtype == 2 || classtype == 0)
+            else if (classtype == 2 || classtype == 0 || classtype == 8)
             {
                 Monthly_R_Layer ddl = new Monthly_R_Layer();
 
