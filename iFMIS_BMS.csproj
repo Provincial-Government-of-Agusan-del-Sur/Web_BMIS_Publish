@@ -2676,7 +2676,7 @@
     <Content Include="Content\themes\yellowGreen\yellowGreen.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Images\logo_31x31.png" />
+    <Content Include="Images\logo_31x31_old.png" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\background-main.jpg" />
     <Content Include="Images\background.png" />
@@ -2713,6 +2713,7 @@
     <Content Include="Images\PIMO.png" />
     <Content Include="Images\PPC.png" />
     <Content Include="Images\PPC2.png" />
+    <Content Include="Images\logo_31x31.png" />
     <Content Include="Images\SoftBlue.jpg" />
     <Content Include="Images\tacurong.png" />
     <Content Include="Images\th.jpg" />

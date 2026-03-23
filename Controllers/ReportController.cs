@@ -7613,7 +7613,7 @@ namespace iFMIS_BMS.Controllers
                         {
 
                             DataTable prep_id = new DataTable();
-                            string _sqlprep = "exec sp_BMS_WFPDFPPT_Preparer " + officeid + "," + yearof + "";
+                            string _sqlprep = "exec sp_BMS_WFPDFPPT_Preparer_v2 " + officeid + "," + yearof + ",'"+ strwfpno_only + "'";
                             prep_id = OleDbHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings["sqldb"].ToString(), System.Data.CommandType.Text, _sqlprep).Tables[0];
                             if (prep_id.Rows.Count > 0)
                             {
