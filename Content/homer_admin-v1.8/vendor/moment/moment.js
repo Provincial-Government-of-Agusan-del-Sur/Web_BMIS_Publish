@@ -54,7 +54,7 @@
         parseTokenOneToSixDigits = /[+\-]?\d{1,6}/, // -999,999 - 999,999
         parseTokenDigits = /\d+/, // nonzero number of digits
         parseTokenWord = /[0-9]*['a-z\u00A0-\u05FF\u0700-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+|[\u0600-\u06FF\/]+(\s*?[\u0600-\u06FF]+){1,2}/i, // any word (or two) characters or numbers including two/three word month in arabic.
-        parseTokenTimezone = /Z|[\+\-]\d\d:?\d\d/gi, // +00:00 -00:00 +0000 -0000 or Z
+        parseTokenTimezone = /Z|[\+\-]\d\r:?\d\d/gi, // +00:00 -00:00 +0000 -0000 or Z
         parseTokenT = /T/i, // T (ISO separator)
         parseTokenOffsetMs = /[\+\-]?\d+/, // 1234567890123
         parseTokenTimestampMs = /[\+\-]?\d+(\.\d{1,3})?/, // 123456789 123456789.123
@@ -83,9 +83,9 @@
 
         // iso time formats and regexes
         isoTimes = [
-            ['HH:mm:ss.SSSS', /(T| )\d\d:\d\d:\d\d\.\d+/],
-            ['HH:mm:ss', /(T| )\d\d:\d\d:\d\d/],
-            ['HH:mm', /(T| )\d\d:\d\d/],
+            ['HH:mm:ss.SSSS', /(T| )\d\r:\d\r:\d\d\.\d+/],
+            ['HH:mm:ss', /(T| )\d\r:\d\r:\d\d/],
+            ['HH:mm', /(T| )\d\r:\d\d/],
             ['HH', /(T| )\d\d/]
         ],
 
@@ -139,7 +139,7 @@
             s: 45,  // seconds to minute
             m: 45,  // minutes to hour
             h: 22,  // hours to day
-            d: 26,  // days to month
+            r: 26,  // days to month
             M: 11   // months to year
         },
 
@@ -1979,7 +1979,7 @@
         if (moment.isDuration(input)) {
             duration = {
                 ms: input._milliseconds,
-                d: input._days,
+                r: input._days,
                 M: input._months
             };
         } else if (typeof input === 'number') {
@@ -1993,7 +1993,7 @@
             sign = (match[1] === '-') ? -1 : 1;
             duration = {
                 y: 0,
-                d: toInt(match[DATE]) * sign,
+                r: toInt(match[DATE]) * sign,
                 h: toInt(match[HOUR]) * sign,
                 m: toInt(match[MINUTE]) * sign,
                 s: toInt(match[SECOND]) * sign,
@@ -2012,7 +2012,7 @@
             duration = {
                 y: parseIso(match[2]),
                 M: parseIso(match[3]),
-                d: parseIso(match[4]),
+                r: parseIso(match[4]),
                 h: parseIso(match[5]),
                 m: parseIso(match[6]),
                 s: parseIso(match[7]),
