@@ -57,7 +57,7 @@ var dateFormat = function () {
             L = date[_ + "Milliseconds"](),
             o = utc ? 0 : date.getTimezoneOffset(),
             flags = {
-                r:    d,
+                d:    d,
                 dd:   pad(d),
                 ddd:  dF.i18n.dayNames[D],
                 dddd: dF.i18n.dayNames[D + 7],

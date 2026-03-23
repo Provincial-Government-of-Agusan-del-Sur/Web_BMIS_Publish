@@ -141,7 +141,7 @@ var dateFormat = function () {
             L = date[_ + "Milliseconds"](),
             o = utc ? 0 : date.getTimezoneOffset(),
             flags = {
-                r:    d,
+                d:    d,
                 dd:   pad(d),
                 ddd:  window.METRO_LOCALES[locale].days[D],
                 dddd: window.METRO_LOCALES[locale].days[D + 7],
@@ -904,7 +904,7 @@ var widget = $.widget;
  *
 */
 
-// t: current time, b: begInnIng value, c: change In value, r: duration
+// t: current time, b: begInnIng value, c: change In value, d: duration
 jQuery.easing['jswing'] = jQuery.easing['swing'];
 
 jQuery.extend( jQuery.easing,

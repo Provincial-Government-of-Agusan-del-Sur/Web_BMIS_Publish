@@ -7613,7 +7613,7 @@ namespace iFMIS_BMS.Controllers
                         {
 
                             DataTable prep_id = new DataTable();
-                            string _sqlprep = "exec sp_BMS_WFPDFPPT_Preparer_v2 " + officeid + "," + yearof + ",'"+ strwfpno_only + "'";
+                            string _sqlprep = "exec sp_BMS_WFPDFPPT_Preparer " + officeid + "," + yearof + "";
                             prep_id = OleDbHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings["sqldb"].ToString(), System.Data.CommandType.Text, _sqlprep).Tables[0];
                             if (prep_id.Rows.Count > 0)
                             {
@@ -7622,7 +7622,9 @@ namespace iFMIS_BMS.Controllers
                                 sig_usertype = Convert.ToInt32(prep_id.Rows[0][0]);
                                 prep_officeid = Convert.ToInt32(prep_id.Rows[0][2]);
                             }
-                            
+
+                            var data2 = "";
+                            var datareview = "";
                             var recomapproval2 = 0;
 
                             recomapproval2 = 2635;
