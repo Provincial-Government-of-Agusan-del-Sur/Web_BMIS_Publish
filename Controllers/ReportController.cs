@@ -7622,9 +7622,7 @@ namespace iFMIS_BMS.Controllers
                                 sig_usertype = Convert.ToInt32(prep_id.Rows[0][0]);
                                 prep_officeid = Convert.ToInt32(prep_id.Rows[0][2]);
                             }
-
-                            var data2 = "";
-                            var datareview = "";
+                            
                             var recomapproval2 = 0;
 
                             recomapproval2 = 2635;
