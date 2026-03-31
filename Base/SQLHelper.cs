@@ -1,4 +1,4 @@
-﻿//===============================================================================
+﻿////=======//=======//=======//=======//=======//=======//=======//=======//=======//=======//=========
 // OleDbHelper based on Microsoft Data Access Application Block (DAAB) for .NET
 // http://msdn.microsoft.com/library/en-us/dnbda/html/daab-rm.asp
 //
@@ -12,7 +12,7 @@
 // You can use it in other .NET applications using Oracle databases.  For complete docs explaining how to use
 // and how it's built go to the originl appblock link. 
 // For this sample, the code resides in the Nile namespaces not the Microsoft.ApplicationBlocks namespace
-//==============================================================================
+////=======//=======//=======//=======//=======//=======//=======//=======//=======//=======//========
 
 using System;
 using System.Data;

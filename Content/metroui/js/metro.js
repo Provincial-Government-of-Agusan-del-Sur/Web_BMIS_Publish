@@ -1788,7 +1788,7 @@ function touch2Mouse(e)
 
 
 
-                    //===  EVENTS =================================================
+                    //===  EVENTS //=======//=======//=======//=======//=======//=======//=======
 
                     //activate the click event for the pull button
                     $(that.pullButton).on("click", function () {

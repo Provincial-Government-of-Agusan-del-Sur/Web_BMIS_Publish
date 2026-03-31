@@ -1856,7 +1856,7 @@ GMaps.geocode = function(options) {
     callback(results, status);
   });
 };
-//==========================
+////=======//=======//============
 // Polygon containsLatLng
 // https://github.com/tparkin/Google-Maps-Point-in-Polygon
 // Poygon getBounds extension - google-maps-extensions
@@ -1931,7 +1931,7 @@ google.maps.Marker.prototype.getId = function() {
   return this['__gm_id'];
 };
 
-//==========================
+////=======//=======//============
 // Array indexOf
 // https://developer.mozilla.org/en-US/docs/JavaScript/Reference/Global_Objects/Array/indexOf
 if (!Array.prototype.indexOf) {
