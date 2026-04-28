@@ -10,7 +10,7 @@ using Kendo.Mvc.UI;
 using Kendo.Mvc.Extensions;
 using System.Net;
 using System.Data.SqlClient;
-using System.Data;
+using System.Data;  
 using System.Web.Script.Serialization;
 using System.Configuration;
 using System.IO;
@@ -7617,9 +7617,9 @@ namespace iFMIS_BMS.Controllers
                             prep_id = OleDbHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings["sqldb"].ToString(), System.Data.CommandType.Text, _sqlprep).Tables[0];
                             if (prep_id.Rows.Count > 0)
                             {
-                                prep_userid = Convert.ToInt32(prep_id.Rows[0][4]);
-                                prep_dephead = Convert.ToInt32(prep_id.Rows[0][3]);
-                                sig_usertype = Convert.ToInt32(prep_id.Rows[0][0]);
+                                prep_userid = Convert.ToInt32(prep_id.Rows[0][5]);
+                                prep_dephead = Convert.ToInt32(prep_id.Rows[0][4]);
+                                sig_usertype = Convert.ToInt32(prep_id.Rows[0][9]);
                                 prep_officeid = Convert.ToInt32(prep_id.Rows[0][2]);
                             }
 
