@@ -7579,6 +7579,13 @@ namespace iFMIS_BMS.Controllers
                             //    wfperr = Convert.ToString(wfperrep.ExecuteScalar());
                             //    retstr = "ErrorNAS";
                             //}
+                            //delete the PDF file
+                            if (System.IO.File.Exists(networkPath2))
+                            {
+                                System.IO.File.Delete(filePath);
+                                Console.WriteLine("File deleted successfully.");
+                            }
+                            //pdf to binary file - END
                         }
                         catch (Exception ex)
                         {
@@ -7617,9 +7624,9 @@ namespace iFMIS_BMS.Controllers
                             prep_id = OleDbHelper.ExecuteDataset(ConfigurationManager.ConnectionStrings["sqldb"].ToString(), System.Data.CommandType.Text, _sqlprep).Tables[0];
                             if (prep_id.Rows.Count > 0)
                             {
-                                prep_userid = Convert.ToInt32(prep_id.Rows[0][5]);
-                                prep_dephead = Convert.ToInt32(prep_id.Rows[0][4]);
-                                sig_usertype = Convert.ToInt32(prep_id.Rows[0][9]);
+                                prep_userid = Convert.ToInt32(prep_id.Rows[0][4]);
+                                prep_dephead = Convert.ToInt32(prep_id.Rows[0][3]);
+                                sig_usertype = Convert.ToInt32(prep_id.Rows[0][8]);
                                 prep_officeid = Convert.ToInt32(prep_id.Rows[0][2]);
                             }
 
