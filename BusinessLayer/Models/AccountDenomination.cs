@@ -37,6 +37,7 @@ namespace iFMIS_BMS.BusinessLayer.Models
         public decimal OriginalAmount { get; set; }
         public string specificactivity { get; set; }
         public string program { get; set; }
+        public decimal AIPDenominationAmount { get; set; }
         //check in QuantityPercentage
     }
 }

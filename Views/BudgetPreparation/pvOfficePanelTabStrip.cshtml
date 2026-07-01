@@ -1282,7 +1282,7 @@
                          "\\# if( isPPMP == 9) { \\# " +
                         "<div class='k-button k-state-disabled' title='Edit Details (?)' '> <span class='fa fa-edit' style='font-size: 12pt;'></span> Edit </div>" +
                         "\\# } else if(isPPMP == 0 || isPPMP == 1){ \\#" +
-                        "<div style=\"font-size: 8.5pt;\" class=\"k-button\" title=\"Edit Details (?)\" onclick=\"EditData( #=AccountID#,\\#=AccountDenominationID\\#,'\\#=DenominationName\\#','\\#=DenominationAmount\\#','\\#=TotalDenominationAmount\\#','\\#=QuantityPercentage\\#','\\#=DenominationMonth\\#','\\#=isPPMP\\#','\\#=program\\#')\"> <span class='fa fa-edit'></span> Edit </div>" +
+                        "<div style=\"font-size: 8.5pt;\" class=\"k-button\" title=\"Edit Details (?)\" onclick=\"EditData( #=AccountID#,\\#=AccountDenominationID\\#,'\\#=DenominationName\\#','\\#=DenominationAmount\\#','\\#=AIPDenominationAmount\\#','\\#=QuantityPercentage\\#','\\#=DenominationMonth\\#','\\#=isPPMP\\#','\\#=program\\#')\"> <span class='fa fa-edit'></span> Edit </div>" +
                         "\\# } else if(isPPMP == 2){ \\#" +
                         "<div class='k-button k-state-disabled' title='Edit Details (?)' '> <span class='fa fa-edit' style='font-size: 12pt;'></span> Edit </div>" +
                         "\\# } \\#").Width(30);
@@ -1479,6 +1479,7 @@
             CeilingStatus = d
            
             if (d == "1") {
+                //alert(23)
                 getOfficeCeiling();
                 getTotalProposed();
                 //UpdateTotalProposed();

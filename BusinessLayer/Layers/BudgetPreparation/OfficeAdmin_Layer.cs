@@ -1764,6 +1764,7 @@ namespace iFMIS_BMS.BusinessLayer.Layers.BudgetPreparation
                         emp.DenominationMonth = Convert.ToDecimal(reader.GetValue(6));
                         emp.specificactivity = Convert.ToString(reader.GetValue(8));
                         emp.program = Convert.ToString(reader.GetValue(9));
+                        emp.AIPDenominationAmount = Convert.ToDecimal(reader.GetValue(10));
                         prog.Add(emp);
                     }
                    
