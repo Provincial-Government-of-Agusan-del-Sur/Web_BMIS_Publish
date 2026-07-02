@@ -42,7 +42,7 @@
     var TotalProposed = 0;
     function getOfficeCeiling() {
         if ($("#OfficeTotalCieling").attr("class") != 'fa fa-spinner fa-pulse fa-spin fa-fw') {
-            document.getElementById("OfficeTotalCieling").innerHTML = "";
+            document.getElementById("OfficeTotalCieling").innerHTML = ' ';
             $("#OfficeTotalCieling").attr('class', 'fa fa-spinner fa-pulse fa-spin fa-fw');
             var OfficeID = @Session["selectedOfficeID"];
             var ProgramID = @Session["ProgID1"];
@@ -1477,7 +1477,7 @@
        
         $.get(url, {OfficeID:OfficeID,proyear:proyear}, function (d) {
             CeilingStatus = d
-           
+           //alert(d)
             if (d == "1") {
                 //alert(23)
                 getOfficeCeiling();
