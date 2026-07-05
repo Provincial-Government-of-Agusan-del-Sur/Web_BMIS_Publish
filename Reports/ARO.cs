@@ -283,9 +283,10 @@ namespace iFMIS_BMS.Reports
             //}
             if (OfficeID == 14 || OfficeID == 49 || OfficeID == 57)
             {
-                textBox55.Value = "PATRICIA ANNE B. PLAZA";
-                textBox56.Value = "Vice Governor";
-               // textBox56.Value = "Acting Governor";
+                //textBox55.Value = "PATRICIA ANNE B. PLAZA";
+                //textBox56.Value = "Vice Governor";
+                textBox55.Value = " GINA A. CEBALLOS";
+                textBox56.Value = "Acting Vice Governor";
             }
             else
             {
