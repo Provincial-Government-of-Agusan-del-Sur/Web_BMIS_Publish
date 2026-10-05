@@ -326,6 +326,7 @@ function setTrnno() {
     // Updated
     
     var ControlNo = $("#OBRNo").val();
+    
     var url = SearchOBRURL();
     $.get(url, { ControlNo: ControlNo }, function (e) {
         var getControlNo = $("#OBRNoEntry").val();
@@ -354,6 +355,7 @@ function setTrnno() {
                     $("#functioncode").val(fnccode[1])
                     e = a;
                     res = e.OBRNo.split("-");
+                    console.log(res)
                     // Start - Set FundType Value
                     $("#FundType").data("kendoComboBox").value(res[0]);
                     $("#FundTypeValue").val(res[0]);
